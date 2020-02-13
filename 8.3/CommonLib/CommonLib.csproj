@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4685F41-0C29-4475-8DD3-672F17CC00E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonLib</RootNamespace>
+    <AssemblyName>CommonLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Class10\Class10.cs" />
+    <Compile Include="Classes\Class12\Class12.cs" />
+    <Compile Include="Classes\Class1\Class1.cs" />
+    <Compile Include="Classes\Class2\Class2.cs" />
+    <Compile Include="Classes\Class3\Class3.cs" />
+    <Compile Include="Classes\Class4\Class4.cs" />
+    <Compile Include="Classes\Class5\Class5.cs" />
+    <Compile Include="Classes\Class6\Class6.cs" />
+    <Compile Include="Classes\Class7\Class7.cs" />
+    <Compile Include="Classes\Class8\Class8.cs" />
+    <Compile Include="Classes\Class8\Class8Data.cs" />
+    <Compile Include="Classes\Class8\Class8Spec.cs" />
+    <Compile Include="Classes\Class8\Spec62.cs" />
+    <Compile Include="Classes\Class8\Spec63.cs" />
+    <Compile Include="Classes\Class8\Spec64.cs" />
+    <Compile Include="Classes\Class11\Class11.cs" />
+    <Compile Include="Classes\Class11\Class11Data.cs" />
+    <Compile Include="Classes\Class11\Class11Spec.cs" />
+    <Compile Include="Classes\Class11\Spec102.cs" />
+    <Compile Include="Classes\Class11\Spec103.cs" />
+    <Compile Include="Classes\Class11\Spec103_Keys.cs" />
+    <Compile Include="Classes\Class11\Spec103_Legion.cs" />
+    <Compile Include="Classes\Class11\Spec103_PreST.cs" />
+    <Compile Include="Classes\Class11\Spec103_PreST_Keys.cs" />
+    <Compile Include="Classes\Class11\Spec103_PreST_Utils.cs" />
+    <Compile Include="Classes\Class11\Spec103_ST_BFA.cs" />
+    <Compile Include="Classes\Class11\Spec103_ST_BFA_Keys.cs" />
+    <Compile Include="Classes\Class11\Spec103_Utils.cs" />
+    <Compile Include="Classes\Class11\Spec104.cs" />
+    <Compile Include="Classes\Class11\Spec105.cs" />
+    <Compile Include="Classes\Class9\Class9.cs" />
+    <Compile Include="Classes\RegisterClasses.cs" />
+    <Compile Include="Common\App.cs" />
+    <Compile Include="Common\Arduino.cs" />
+    <Compile Include="Common\Capture.cs" />
+    <Compile Include="Common\Class.cs" />
+    <Compile Include="Common\ClassData.cs" />
+    <Compile Include="Common\ClassSpec.cs" />
+    <Compile Include="Common\ComPort.cs" />
+    <Compile Include="Common\Config.cs" />
+    <Compile Include="Common\Conversion.cs" />
+    <Compile Include="Common\Data.cs" />
+    <Compile Include="Common\Hotkey.cs" />
+    <Compile Include="Common\KeyboardHook.cs" />
+    <Compile Include="Common\Log.cs" />
+    <Compile Include="Common\MouseHook.cs" />
+    <Compile Include="Common\PetDirector.cs" />
+    <Compile Include="Common\ScreenCorner.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Common\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AB.cs" />
+    <Compile Include="Data\AU.cs" />
+    <Compile Include="Data\CI.cs" />
+    <Compile Include="Data\CRC.cs" />
+    <Compile Include="Data\FOCUS.cs" />
+    <Compile Include="Data\LIFE.cs" />
+    <Compile Include="Data\OPT.cs" />
+    <Compile Include="Data\PET.cs" />
+    <Compile Include="Data\PINF.cs" />
+    <Compile Include="Data\POW.cs" />
+    <Compile Include="Data\SIGNAL.cs" />
+    <Compile Include="Data\TINF.cs" />
+    <Compile Include="Data\TTD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

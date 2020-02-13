@@ -1,0 +1,13 @@
+
+{frame} = CreateFrame("Button", "{name}", nil, "SecureActionButtonTemplate")
+{frame}:SetAttribute("type", "macro")
+{frame}:SetAttribute("macrotext", "{macro}")
+{frame}:SetSize({size}, {size})
+{frame}:SetPoint("TOP", {x}, 0)
+{frame}:SetFrameStrata("TOOLTIP")
+{frame}:SetFrameLevel(1000)
+{frame}:SetToplevel(true)
+{frame}.t = {frame}:CreateTexture()        
+{frame}.t:SetColorTexture(0, 0, 0, 1)
+{frame}.t:SetAllPoints({frame})
+{frame}:Show()		

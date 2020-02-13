@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>8207cbd0-93d0-47eb-a3a0-ed017325fab7</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CommonLib</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\MainClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Spec1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Spec2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Spec2_0000000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Spec3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Spec3_0000000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Spec4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Capture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Class.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Conversion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\KeyboardHook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Log.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ScreenCorner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AU.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\FOCUS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\LIFE.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CRC.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\PINF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\POW.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\OPT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\SIGNAL.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TINF.cs" />
+  </ItemGroup>
+</Project>

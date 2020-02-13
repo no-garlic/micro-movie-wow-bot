@@ -1,0 +1,41 @@
+﻿
+App:
+    - check if target is casting an interuptable spell, if not then use stun rather than skill bash
+    - dash / stampeeding road / swiftness potion button
+	- healing potion button - only use potion if low health and in combat
+	- dps potion button - only use potion if boss mode
+    - don’t use drums if have exhaustion debuff
+
+Lua:
+    - optimize lua based on class spec
+    - optimize lua to use specific events rather than everything in update
+    - generate a separate lua file for each class and update in TOC
+    - reduce memory usage and do a cpu profile
+    - move frames into an array because running out of local variables
+	- set frame strata so the frame is not obscured by low health screen tint
+	- make functions in conversion.lua local 
+
+Fixed:
+    - only use TF if you will be able to do a finishing move before it dies (ie cp >= 4 and target.health >= 200k - (10k * (110 - playerlevel)))
+    - take into account the target health and level and if in a group or solo to decide which finisher to use
+    - check Omen Of Clarity proc 
+    - use UnitPowerMax() in POW.lua specifically for energy, and update EnergyToMax below as berserk increases energy to 150 (remove hard coded 100 value)
+    - use Life.lua for the player instead of packing it inside of POW.lua
+    - ooc does not appear to be working
+    - dont cast HT when stealth
+    - move screen location because it is obscured in class hall
+    - if in vehicle, the should disactivate
+    - use predswift to get a bloodtalon before casting ashamane's frenzy
+    - deploy to c:\program files
+    - maim can be used with any number of cp's if solo
+    - button to toggle berserk mode (just sets a frame color for a few seconds, so the app can use berserk as soon as it is the correct time
+
+Profiling:
+    - Beginning Lua book (363)
+    - http://old.wowace.com/Coding_Tips
+
+WarcraftLogs
+	- Query: source.name = "Eldryn" AND NOT IN RANGE FROM type = "applybuff" AND ability.name = "bloodtalons" TO type = "removebuff" AND ability.name = "bloodtalons" GROUP BY source END AND ability.name IN ("rake", "rip") AND type = "cast"
+			 source.name = "Eldryn" AND NOT IN RANGE FROM type = "applybuff" AND ability.name = "bloodtalons" TO type = "removebuff" AND ability.name = "savage roar" GROUP BY source END AND ability.name IN ("rake", "rip") AND type = "cast"
+
+

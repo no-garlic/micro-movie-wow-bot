@@ -1,0 +1,83 @@
+﻿
+8.3 TODO
+
+    - Create 2 seperate applications, one for capture, one for keyboard hook
+    - Move Capture class and KeyboardHook class to seperate applications
+    - Remove Capture and KeyboardHook members from App class
+    - Create a network class to send / receive network message
+    - Remove all of the Logging stuff and other stuff not used
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Feral:
+    1 - Get focusser addon again
+    1 - Check focus target works
+        - istrue(IsSpellInRange("Moonfire", "focus")) does not work for Moonfire as the spellId changes based on stance
+
+Addons:
+    3 - Update Teleport Cloak for my item id's that dont work with it
+    3 - Update TrufiGCD to have a whitelist rather than a blacklist 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Backlog:
+    - Clean up the LogData system
+    - Test and fix or remove the Cooldown Timers
+    - Check if target is casting an interuptable spell, if not then use stun rather than skill bash / wild charge
+    - Consider logging TTD prediction vs actual.
+    - Rename abbreviated names to text names to make things understandable, and use => operator
+    - Change the spec rules to a text file with lambda expressions as a behavior tree / table rather than a complex set of nested if statements
+        - https://github.com/nreco/lambdaparser
+        - https://www.nrecosite.com/nrecoframework/common_library_net.aspx
+        - PM> Install-Package NReco.LambdaParser -Version 1.0.7
+    - Print to console the abilities not the buttons
+    - Add a monitor frame (ctrl-alt-m) to monitor all values
+    - Show the next ability that will be cast on the monitor by executing the keypressed function
+    - Use signal bits (or a new frame) to send back to the client when an ability is used (the spellId maybe), from combat events, and show it on a new panel (or the monitor panel)
+    - Move some common things up one level, such as player health, talents, target info, focus info, signal bits, etc
+    - Simplify the Classxx classes, move some of the code and data components to the base class
+    - SpecOption text (MovieMaker.cs::m_Options.Text) can be removed
+    - Investigate Postal:IsChatFrameActive() function for chat frame
+    - Change background color of App based on status
+    - Add a class icon, use the class name in the Binding field, or use the class color in App so we know what class is connected
+    - Update icons in ShowClassSpec() in MovieMaker.cs or move them to the actual spec cs file location
+    - The config element ForceFightingABoss could be a signal bit, as well as ForceNotFightingABoss could be added
+    - Automate ClassHelper to add all of the registered classes
+    - Change folder names in solution to match character class names
+    - Add Signal scope to be within the addon, not global
+    - Add TTD scope to be within the addon, not global
+    - Write all globals into classhelper, not into each addon, and dont duplicate clamp & shift
+    - make method names (case) consistent
+    - write size to classhelper and to addons so it does not need to be passed
+    - Optimize lua to use specific events rather than everything in update
+	- Set frame strata so the frame is not obscured by low health screen tint
+    - Automate generation of macros
+    - Each of the frame types should have an update function in ClassHelper, then the individual frames just call it with a few args
+    - Training dummies are not supported fully (eg focusTargetUpdate)
+
+Chat Frame:
+    function Postal:IsChatFrameActive(i)
+	    local _, _, _, _, _, _, shown = FCF_GetChatWindowInfo(i);
+	    local chatFrame = _G["ChatFrame"..i]
+	    if chatFrame then
+		    if shown or chatFrame.isDocked then
+			    return true
+		    end
+	    end
+	    return false
+    end
+
+Profiling:
+    - Beginning Lua book (363)
+    - http://old.wowace.com/Coding_Tips
+
+WarcraftLogs
+	- Query: source.name = "Eldryn" AND NOT IN RANGE FROM type = "applybuff" AND ability.name = "bloodtalons" TO type = "removebuff" AND ability.name = "bloodtalons" GROUP BY source END AND ability.name IN ("rake", "rip") AND type = "cast"
+			 source.name = "Eldryn" AND NOT IN RANGE FROM type = "applybuff" AND ability.name = "bloodtalons" TO type = "removebuff" AND ability.name = "savage roar" GROUP BY source END AND ability.name IN ("rake", "rip") AND type = "cast"
+
+
+
+
+

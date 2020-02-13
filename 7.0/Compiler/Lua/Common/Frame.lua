@@ -1,0 +1,13 @@
+
+{frame} = CreateFrame("frame")
+{frame}:SetSize(size, size)
+{frame}:SetPoint({point})
+{frame}:SetFrameStrata("TOOLTIP")
+{frame}:SetFrameLevel(1000)
+{frame}:SetToplevel(true)
+{frame}.t = {frame}:CreateTexture()        
+{frame}.t:SetColorTexture(0, 0, 0, 1)
+{frame}.t:SetAllPoints({frame})
+{frame}:Show()		
+{frame}:SetScript("OnUpdate", {function})
+{frame}.prev = colorstate.new()

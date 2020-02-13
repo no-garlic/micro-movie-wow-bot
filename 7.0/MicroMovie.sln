@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMovie", "MicroMovie\MicroMovie.csproj", "{FDEC6190-89D7-4035-8C83-488FE032463C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLib", "CommonLib\CommonLib.shproj", "{8207CBD0-93D0-47EB-A3A0-ED017325FAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler", "Compiler\Compiler.csproj", "{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimC", "SimC\SimC.csproj", "{07B7AE8A-6E85-4582-9A0E-14BA731C293B}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CommonLib\CommonLib.projitems*{b7c23f26-9ca3-4d17-8b8a-e657a1c981e1}*SharedItemsImports = 4
+		CommonLib\CommonLib.projitems*{8207cbd0-93d0-47eb-a3a0-ed017325fab7}*SharedItemsImports = 13
+		CommonLib\CommonLib.projitems*{fdec6190-89d7-4035-8c83-488fe032463c}*SharedItemsImports = 4
+		CommonLib\CommonLib.projitems*{07b7ae8a-6e85-4582-9a0e-14ba731c293b}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B7AE8A-6E85-4582-9A0E-14BA731C293B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B7AE8A-6E85-4582-9A0E-14BA731C293B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B7AE8A-6E85-4582-9A0E-14BA731C293B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B7AE8A-6E85-4582-9A0E-14BA731C293B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

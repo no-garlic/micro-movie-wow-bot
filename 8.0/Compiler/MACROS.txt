@@ -1,0 +1,231 @@
+﻿
+#showtooltip Regrowth
+/console autounshift 0
+/use [@Mouseover,help,nodead][help,nodead][@Player] Regrowth
+/console autounshift 1
+
+
+
+Mounts:
+-----------------------------
+
+Mount:
+#showtooltip
+/cast [swimming] Travel Form; [indoors] Cat Form;  [combat] Travel Form; [flyable] Travel Form; [mod:ctrl] Azure Water Strider; [mod:shift] Luminous Starseeker; Sky Golem; /dismount [mounted]
+
+Cat Form:
+#showtooltip
+/stopcasting
+/use [noform] Cat Form; [form:1] Cat Form; [form:2] Bear Form; [form:3] Cat Form; [form:4] Cat Form
+
+Bear Form:
+#showtooltip
+/stopcasting
+old: /use [noform] Bear Form; [form:1] Cat Form; [form:2] Bear Form; [form:3] Bear Form; [form:4] Bear Form
+new: /use [combat] Bear Form; [noform] Cat Form; [form:1] Cat Form; [form:2] Bear Form; [form:3] Cat Form; [form:4] Cat Form
+conditionals: https://wow.gamepedia.com/Macro_conditionals
+
+
+
+Vendor:
+-----------------------------
+
+Purchase:
+/run if GetMerchantNumItems() > 0 then for bag = 0,NUM_BAG_SLOTS,1 do for slot = 1,GetContainerNumSlots(bag),1 do if (select(10,GetContainerItemInfo(bag,slot)) == 109262) then UseContainerItem(bag, slot) end end end end
+
+Salvage:
+/use Bloody Gold Purse
+/use Sack of Salvaged Goods
+/use Large Crate of Salvage
+
+
+
+Druid Helper:
+-----------------------------
+Signal:
+/script Signal:toggleSignalBit(1)
+
+Signal:
+/DruidHelper set 1
+
+
+
+Pets:
+-----------------------------
+
+Show Pets:
+/click CollectionsMicroButton
+/click CollectionsJournalTab2
+
+Cage Pet:
+/run local p,j={},C_PetJournal for i=1,j.GetNumPets() do p={j.GetPetInfoByIndex(i)} if p[16] and p[1] then j.CagePetByID(p[1]) return end end
+
+Dismiss Pet:
+/dismisspet
+
+Revive Pets:
+/cast Revive Battle Pets
+
+
+
+Tradeskills:
+-----------------------------
+
+Fishing:
+#showtooltip Fishing
+/fb fishing start
+/stopcasting
+/cast Fishing
+
+
+
+Abilities:
+-----------------------------
+
+RE:
+#showtooltip Regrowth
+/run if InCombatLockdown() then SetCVar("autounshift",0) end
+/cast Regrowth
+/console autounshift 1
+/use 3
+
+PR:
+#showtooltip Prowl
+/cast [form:3] Travel Form
+/dismount [mounted]
+/cast Prowl
+
+MB:
+#showtooltip Mighty Bash
+/stopcasting
+/cast Mighty Bash
+
+BE:
+#show Berserk
+#showtooltip
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/use Tiger's Fury
+/use Berserk
+
+MF:
+#showtooltip Moonfire
+/run if InCombatLockdown() then SetCVar("autounshift",0) end
+/cast Moonfire
+/console autounshift 1
+/use 3
+
+FB_TF:
+#show Ferocious Bite
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Ferocious Bite
+
+RI_TF:
+#show Rip
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Rip
+
+SH_TF:
+#show Shred
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Shred
+
+SW_TF:
+#show Swipe
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Swipe
+
+TH_TF:
+#show Thrash
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Thrash
+
+RK_SM:
+#show Rake
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Shadowmeld
+/cast Rake
+
+RK_TF:
+#show Rake
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Rake
+END
+
+MF_TF:
+#show Moonfire
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Moonfire
+
+SR_TF:
+#show Savage Roar
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Savage Roar
+
+FF:
+#show Feral Frenzy
+/console Sound_EnableSFX 0
+/use 13
+/use 14
+/console Sound_EnableSFX 1
+/cast Tiger's Fury
+/cast Feral Frenzy
+
+MF_F:
+/cast [target=focus] Moonfire
+
+RI_F:
+/cast [target=focus] Rip
+
+RK_F:
+/cast [target=focus] Rake
+
+
+
+Druid Abilities Updated:
+-----------------------------
+
+/run sfx = GetCVar("Sound_EnableSFX") or 0
+/run if sfx == 1 then SetCVar("Sound_EnableSFX", 0) end
+/use 13
+/use 14
+/run if sfx == 1 then SetCVar("Sound_EnableSFX", 1) end
+/run UIErrorsFrame:Clear()
+

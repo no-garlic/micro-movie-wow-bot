@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.9.17
+MinimumVisualStudioVersion = 15.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMaker", "MovieMaker\MovieMaker.csproj", "{FDEC6190-89D7-4035-8C83-488FE032463C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler", "Compiler\Compiler.csproj", "{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{A4685F41-0C29-4475-8DD3-672F17CC00E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaLib", "LuaLib\LuaLib.csproj", "{ECB606C6-5C41-4C26-8172-CD7377D25B15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CAFDD372-261A-4A76-9083-46FAE15D943B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleBattles", "LittleBattles\LittleBattles.csproj", "{9A56EB27-D97E-4C4E-A553-5CB7C74BDB40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanMaster", "OceanMaster\OceanMaster.csproj", "{81B57DDB-B612-4DB4-8BEA-C9604E13F4F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEC6190-89D7-4035-8C83-488FE032463C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C23F26-9CA3-4D17-8B8A-E657A1C981E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4685F41-0C29-4475-8DD3-672F17CC00E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4685F41-0C29-4475-8DD3-672F17CC00E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4685F41-0C29-4475-8DD3-672F17CC00E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4685F41-0C29-4475-8DD3-672F17CC00E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB606C6-5C41-4C26-8172-CD7377D25B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB606C6-5C41-4C26-8172-CD7377D25B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB606C6-5C41-4C26-8172-CD7377D25B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB606C6-5C41-4C26-8172-CD7377D25B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A56EB27-D97E-4C4E-A553-5CB7C74BDB40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A56EB27-D97E-4C4E-A553-5CB7C74BDB40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A56EB27-D97E-4C4E-A553-5CB7C74BDB40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A56EB27-D97E-4C4E-A553-5CB7C74BDB40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B57DDB-B612-4DB4-8BEA-C9604E13F4F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B57DDB-B612-4DB4-8BEA-C9604E13F4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B57DDB-B612-4DB4-8BEA-C9604E13F4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B57DDB-B612-4DB4-8BEA-C9604E13F4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4685F41-0C29-4475-8DD3-672F17CC00E6} = {CAFDD372-261A-4A76-9083-46FAE15D943B}
+		{ECB606C6-5C41-4C26-8172-CD7377D25B15} = {CAFDD372-261A-4A76-9083-46FAE15D943B}
+	EndGlobalSection
+EndGlobal

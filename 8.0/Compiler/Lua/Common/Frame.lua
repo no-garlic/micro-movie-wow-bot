@@ -1,0 +1,1 @@
+{helper}.Frames["{frame}"] = ClassHelper:NewFrame({anchor}, {offset}, size, {function})
